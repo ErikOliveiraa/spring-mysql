@@ -1,7 +1,7 @@
 package br.com.erik.rest_springboot.controllers;
 
 import br.com.erik.rest_springboot.model.Person;
-import br.com.erik.rest_springboot.request.PersonServices;
+import br.com.erik.rest_springboot.Services.PersonServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +24,7 @@ public class PersonController {
         method = RequestMethod.GET,
         produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public Person findById(@PathVariable("id") String id){
+    public Person findById(@PathVariable("id") Long id){
         return service.findById(id);
     }
 
@@ -50,7 +50,7 @@ public class PersonController {
     @RequestMapping(value = "/{id}",
             method = RequestMethod.DELETE
     )
-    public void delete(@PathVariable("id") String id){
+    public void delete(@PathVariable("id") Long id){
         service.delete(id);
     }
 
