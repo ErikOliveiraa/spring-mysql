@@ -13,5 +13,8 @@ spring:
     properties:
       hibernate:
     show-sql: false
-
     open-in-view: false
+logging:
+  level:
+    ##root: WARN
+    br.com.erik.rest_springboot: DEBUG

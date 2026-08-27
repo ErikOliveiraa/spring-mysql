@@ -3,6 +3,7 @@ package br.com.erik.rest_springboot.Services;
 import br.com.erik.rest_springboot.exception.ResourceNotFoundException;
 import br.com.erik.rest_springboot.model.Person;
 import br.com.erik.rest_springboot.repository.PersonRepository;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ import java.util.logging.Logger;
 public class PersonServices {
 
     private final AtomicLong counter = new AtomicLong();
-    private Logger logger = Logger.getLogger(PersonServices.class.getName());
+    private org.slf4j.Logger logger = LoggerFactory.getLogger(PersonServices.class);
 
     @Autowired
     PersonRepository repository;
