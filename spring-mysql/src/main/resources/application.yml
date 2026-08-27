@@ -10,7 +10,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    #properties:
-      #hibernate:
-        #dialect: org.hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate:
     show-sql: false
+
+    open-in-view: false
